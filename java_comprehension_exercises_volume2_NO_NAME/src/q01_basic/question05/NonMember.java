@@ -1,7 +1,8 @@
 package q01_basic.question05;
 
-public class NomMember extends AbstMember {
-	public NomMember(String name) {
+public class NonMember extends AbstMember {
+
+	public NonMember(String name) {
 		super.name = name;
 
 	}
