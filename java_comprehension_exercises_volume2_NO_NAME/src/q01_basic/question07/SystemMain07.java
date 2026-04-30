@@ -9,22 +9,32 @@ public class SystemMain07 {
 		System.out.print("input number>>");
 		int limit = 0;
 		//TODO ここから実装する
+		try {
+			ConsoleReader consoleReader = new ConsoleReader();
+			consoleReader.inputNumber();
+		} catch (NumberFormatException e) {
+			// TODO: handle exception
+			e.printStackTrace();
 
-		System.out.println("****************");
-		System.out.println("Listの合計を計算します");
-		int sum = 0;
-		//TODO ここから実装する
+			System.out.println("****************");
+			System.out.println("Listの合計を計算します");
+			int sum = 0;
+			//TODO ここから実装する
+			numberList.addFromOneTo(limit);
 
-		System.out.println("1から" + limit + "までの合計は" + sum + "です。");
+			System.out.println("1から" + limit + "までの合計は" + sum + "です。");
 
-		System.out.println("****************");
-		System.out.println("Listの各要素を2倍します");
-		//TODO ここから実装する
+			System.out.println("****************");
+			System.out.println("Listの各要素を2倍します");
+			//TODO ここから実装する
+			numberList.getNumbers();
+			System.out.println();
 
-		System.out.println("****************");
-		System.out.println("Listの前半分のインデックスの要素を削除します");
-		//TODO ここから実装する
+			System.out.println("****************");
+			System.out.println("Listの前半分のインデックスの要素を削除します");
+			//TODO ここから実装する
+
+		}
 
 	}
-
 }
