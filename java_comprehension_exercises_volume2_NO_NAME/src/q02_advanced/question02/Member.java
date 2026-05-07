@@ -1,4 +1,4 @@
-package q02_advanced.question01;
+package q02_advanced.question02;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,13 +20,19 @@ public class Member {
 		this.name = name;
 		this.age = age;
 		this.rank = rank;
-		this.coupons = new ArrayList<>();
-		coupons.add(new Coupon(1, 0.5, "最初の特典"));
-		coupons.add(new Coupon(2, 0.25, "今月の特典"));
+
 	}
 
 	public void showMember() {
 		System.out.println(toString());
+	}
+
+	public static Member getInstance(int id, String password, String name, int age, int rank) {
+		Member member1 = new Member(id, password, name, age, rank);
+		member1.coupons = new ArrayList<>();
+		Coupon.getInstance(1, 0.5, "最初の特典");
+		Coupon.getInstance(2, 0.25, "今月の特典");
+		return member1;
 	}
 
 	public int getId() {
@@ -58,7 +64,7 @@ public class Member {
 	}
 
 	public void setAge(int age) {
-		this.age = asge;
+		this.age = age;
 	}
 
 	public int getRank() {
