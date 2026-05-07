@@ -10,5 +10,6 @@ public class ConsoleReader {
 		String sr = reader.readLine();
 		int num = Integer.parseInt(sr);
 		return num;
+
 	}
 }
